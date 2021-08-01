@@ -1,0 +1,21 @@
+<div class="card">
+    <img src="https://vueschool.io/media/cb103360d9341bd311b96974a83a3a91/vuejs-components-fundamentals.png"
+      style="width: 50%">
+    <div class="container">
+      <h4>sweta</h4>
+      <p>mycomp works!</p>
+    </div>
+    
+    </div>
+    
+    <div>
+      <button (click)="onClick('sec')">
+        MYCOMP2</button>
+       <button [routerLink]="['/second/sweta']">Second</button> 
+      <button (click)="onClick('third')">MYCOMP3</button>
+    
+       <button [routerLink]="['/third']" [queryParams]="{name:'sweta'}">Third</button>
+     
+    </div>
+
+

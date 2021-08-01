@@ -1,0 +1,39 @@
+<!-- <p>school works!</p>
+<div>
+    
+     <button [routerLink]="['/student1']">Second</button> 
+
+     <button [routerLink]="['/student2']">Third</button>
+</div> -->
+<head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     </head>
+   <h2>Add form</h2>
+   <!-- <button (click)="addUser()" class="btn btn-primary">ADD</button> -->
+   <div class="container">
+       <table class="table table-bordered table-striped">
+         <thead>
+         <tr>
+           <th>OrderId</th>
+           <th>customerID</th>
+           <th>phone</th>
+           
+         </tr>
+         </thead>
+         <tbody>
+         <tr *ngFor="let val of custdata">
+           <td><span>{{val.id}}</span></td>
+           <td><span>{{val.custid}}</span></td> 
+           <td><span>{{val.phone}}</span></td>
+           <td>
+             
+             <button (click)="EditUser(val)"class="btn btn-primary">EDIT</button>
+             <button (click)="deleteUser(val.id)"class="btn btn-primary">DELETE</button>
+             <!-- <button (click)="deleteuser(val._id)" class="btn btn-danger">DELETE</button> -->
+             <!-- <a href="#" [routerLink]="['/val/',val.id,'edit']" class="btn btn-primary">Edit</a> -->
+           </td>
+           
+         </tr>
+         </tbody>
+       </table>
+     </div>

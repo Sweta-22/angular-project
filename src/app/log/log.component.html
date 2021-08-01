@@ -1,0 +1,28 @@
+<p>log works!</p>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
+<h1>ANGULAR</h1>
+
+
+     
+<form #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
+
+    <div class="form-group">
+        <label for="sname">NAME</label>
+        <input required minlength="3" maxlength="10" ngModel name="sname" type="text" #name="ngModel"
+            class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input required minlength="3" maxlength="20" ngModel name="email" type="text" #email="ngModel"
+                class="form-control" id="email">
+                <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                    EMAIL is required.
+                </div>
+            </div>
+           
+            <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+
+        </form>
+            

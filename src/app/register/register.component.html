@@ -1,0 +1,50 @@
+<p>register works!</p>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
+<h1>ANGULAR</h1>
+<!-- <a href="#" [routerLink]="['/val/',val.id,'edit']" class="btn btn-primary">GOTO Edit</a> -->
+
+     
+<form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)">
+
+    <div class="form-group">
+        <label for="sname">NAME</label>
+        <input required minlength="3" maxlength="10" ngModel name="sname" type="text" #name="ngModel"
+            class="form-control" id="email">
+            <!-- <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                name is required.
+            </div> -->
+        </div>
+            
+
+    <div class="form-group">
+        <label for="sroll">Roll</label>
+        <input required minlength="3" maxlength="10" ngModel name="sroll" type="number" #roll="ngModel"
+            class="form-control" id="sroll">
+            <!-- <div class="alert alert-danger" *ngIf="sroll.touched && !sroll.valid">
+                PASSWORD is required.
+            </div> -->
+        </div>
+        <div class="form-group">
+            <label for="address">ADD</label>
+            <input required minlength="3" maxlength="10" ngModel name="address" type="text" #address="ngModel"
+                class="form-control" id="address">
+                <!-- <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                    PASSWORD is required. -->
+                </div>
+            
+
+        <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input required minlength="3" maxlength="20" ngModel name="email" type="text" #email="ngModel"
+                class="form-control" id="email">
+                <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                    EMAIL is required.
+                </div>
+            </div>
+           
+            <button class="btn btn-primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+
+        </form>
